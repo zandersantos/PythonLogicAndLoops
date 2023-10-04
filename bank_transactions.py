@@ -24,3 +24,26 @@ print("Deposit: D".center(40," "))
 print("Withdraw: W".center(40," "))
 print("To Quit: Q".center(40," "))
 print(interface_break)
+
+user_input = (input("Enter your selection: "))
+
+if not user_input in transaction_options:
+    print("INVALID SELECTION".center(40," "))
+    print(interface_break)
+    
+elif user_input == "D":
+    enter_transaction = (float(input("Enter amount of transaction:")))
+    user_balance = user_balance + enter_transaction
+    
+    print(interface_break)
+    print(f"Your current balance is: ${user_balance:,.2f}".center(40, " "))
+    print(interface_break)
+
+elif user_input == "W":
+    enter_transaction = (float(input("Enter amount of transaction:")))
+    if enter_transaction > user_balance:
+        print("INSUFFICIENT FUNDS".center(40," "))
+    else:
+        user_balance = user_balance - enter_transaction
+        print(f"Your current balance is: ${user_balance:,.2f}".center(40, " "))
+
