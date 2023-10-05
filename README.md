@@ -9,5 +9,8 @@ Zander Santos
 ## Assignment
 Flow of Control: Applying Logic and Loops to a Python Program
 
- ## bank_transactions
+## bank_transactions
 Simulate an ATM for deposits and withdraw transactions
+
+## interest_update
+Apply an interest to multiple customers accounts based on their current balance
