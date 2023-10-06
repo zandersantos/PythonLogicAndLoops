@@ -12,7 +12,7 @@ import csv
 account_balances = {}
 
 
-with open("account_balances.txt","r") as file:
+with open('account_balances.txt','r') as file:
     for row in file:
         key, value = row.strip().split('|')
         account_balances [key] = float(value)
@@ -55,5 +55,11 @@ with open("2023-10-02-ZS","w", newline='') as file:
     
     for account, balance in account_balances.items():
         writer.writerow({'Account': account, 'Balance': balance})
+        
+with open('2023-10-02-ZS', 'r') as file:
+    reader = csv.DictReader(file)
+    for row in reader:
+        print(row['Account'], row['Balance'])
+    
     
     
