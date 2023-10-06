@@ -1,7 +1,9 @@
 # Assignment3
 
 ## Description
-[Provide a brief description of the project]
+Create two seperate programs. 
+- First simulates an ATM through making transactions
+- Second performs batch interest rate updates based on the accounts balances
 
 ## Author
 Zander Santos
