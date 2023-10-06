@@ -6,6 +6,8 @@ Usage:
 """
 
 import pprint
+import csv
+
 
 account_balances = {}
 
@@ -14,6 +16,7 @@ with open("account_balances.txt","r") as file:
     for row in file:
         key, value = row.strip().split('|')
         account_balances [key] = float(value)
+    
         
 pprint.pprint(account_balances)
 
@@ -43,3 +46,14 @@ for key, value in account_balances.items():
 
      
 pprint.pprint(account_balances)
+
+fieldnames = ['Account', 'Balance']
+
+with open("2023-10-02-ZS","w", newline='') as file:
+    writer = csv.DictWriter(file,fieldnames=fieldnames)
+    writer.writeheader()
+    
+    for account, balance in account_balances.items():
+        writer.writerow({'Account': account, 'Balance': balance})
+    
+    
